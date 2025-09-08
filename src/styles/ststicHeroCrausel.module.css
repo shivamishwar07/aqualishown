@@ -1,0 +1,152 @@
+.imageLayer {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 600ms ease;
+    will-change: opacity, transform;
+}
+
+.imageActive {
+    opacity: 1;
+    animation: kenburns 6000ms ease both;
+}
+
+.bottomWave {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -20px;
+    height: 38px;
+    background: linear-gradient(180deg, rgba(30, 64, 175, 0) 0%, rgba(37, 99, 235, 0.18) 100%);
+    pointer-events: none;
+}
+
+.contentLayer {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transform: translateY(8px);
+    transition: opacity 450ms ease, transform 450ms ease;
+}
+
+.contentActive {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.imageLayer {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 600ms ease;
+    will-change: opacity, transform;
+    pointer-events: none;
+}
+
+.imageActive {
+    opacity: 1;
+    animation: kenburns 6000ms ease both;
+    pointer-events: auto;
+}
+
+.contentLayer {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transform: translateY(8px);
+    transition: opacity 450ms ease, transform 450ms ease;
+    pointer-events: none;
+}
+
+.contentActive {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.ctaBtn {
+    margin-top: 20px;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    padding: 14px 22px;
+    background: transparent;
+    color: #0b2a66 !important;
+    font-weight: 600;
+    letter-spacing: .02em;
+    text-decoration: none;
+    overflow: hidden;
+    z-index: 0;
+    isolation: isolate;
+}
+
+.ctaBtn::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #39b54a;
+    transform: scaleX(0.2);
+    transform-origin: left;
+    transition: transform .6s ease;
+    z-index: -1;
+    border-radius: inherit;
+}
+
+.ctaBtn:hover::before {
+    transform: scaleX(1);
+}
+
+.ctaBtn:hover {
+    color: #fff;
+    transform: translateY(-1px);
+}
+
+.rightContent {
+    border: 2px solid #ddd;
+    height: 70%;
+    margin-top: 10%;
+    z-index: 0;
+    border-left: 0;
+}
+
+.customRact {
+    width: 35px;
+    height: 115px;
+    background-color: #78bef9;
+    position: absolute;
+    margin-left: -22px;
+    bottom: 0;
+}
+
+.ctaBtn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 14px 30px rgba(39, 174, 96, .45);
+}
+
+.navBtnGreen,
+.navBtnGrey {
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    border: 0;
+    font-size: 22px;
+    line-height: 1;
+    cursor: pointer;
+    transition: filter 120ms ease, transform 120ms ease;
+}
+
+.navBtnGreen {
+    background: #2ecc71;
+    color: #fff;
+}
+
+.navBtnGrey {
+    background: #ecf0f1;
+    color: #223;
+}
+
+.navBtnGreen:hover,
+.navBtnGrey:hover {
+    filter: brightness(0.95);
+}

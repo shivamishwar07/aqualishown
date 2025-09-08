@@ -1,0 +1,137 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 1.5rem 2rem;
+    background: transparent;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px solid white;
+    transition: all 0.3s ease;
+    z-index: 100;
+}
+
+.hidden {
+    transform: translateY(-100%);
+    transition: transform 0.3s ease;
+}
+
+.navbar:hover {
+    border-color: rgba(0, 71, 186, 1);
+    background: white;
+    color: #00205b;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbarHovered {
+    border-color: rgba(0, 71, 186, 1);
+    background: white;
+    color: #00205b;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.menu {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+}
+
+.menuItem {
+    cursor: pointer;
+    position: relative;
+    padding-bottom: 6px;
+    transition: color 0.3s;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.menuItem::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -25px;
+    height: 3px;
+    width: 0%;
+    background-color: #00aa4f;
+}
+
+.menuItem:hover::after,
+.active::after {
+    width: 100%;
+}
+
+.menuItem:hover {
+    color: #0047ba;
+}
+
+.dropdown {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    min-width: 240px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    z-index: 99;
+}
+
+.dropdownItem {
+    padding: 0.5rem 0;
+    color: #0047ba;
+    white-space: nowrap;
+}
+
+.megaMenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100vw;
+    background: white;
+    padding: 2rem 10%;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    z-index: 99;
+    border-top: 1px solid blue;
+}
+
+.chevron {
+    margin-top: -17px !important;
+    font-size: 0.6rem;
+    margin-left: 6px;
+}
+
+
+.megaColumn {
+    flex: 1;
+    min-width: 200px;
+}
+
+.megaColumn h4 {
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+    color: #00205b;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.megaColumn ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.megaColumn ul li {
+    margin: 0.5rem 0;
+}
+
+.icon {
+    font-size: 1.2rem;
+}

@@ -1,0 +1,235 @@
+/* Container wrapper */
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+    padding: 4rem 2rem;
+    background-color: #fff;
+}
+
+/* ----------------------- Testimonial Section ------------------------ */
+.testimonial {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .testimonial {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.testimonialText {
+    flex: 1;
+    border: 1px solid #dcdcdc;
+    padding: 2rem;
+    position: relative;
+}
+
+.testimonialText h2 {
+    font-size: 2rem;
+    color: #003087;
+}
+
+.customColorBorder {
+    width: 35px;
+    background: #00458b;
+    height: 115px;
+    position: absolute;
+    bottom: 0;
+    left: -15px;
+}
+
+.testimonialText h2 span {
+    color: #00aa4f;
+    font-weight: bold;
+}
+
+.testimonialText p {
+    color: #003087;
+    margin-top: 1rem;
+    font-size: 1.1rem;
+}
+
+.underline {
+    width: 320px;
+    height: 1px;
+    background-color: #00aa4f;
+    margin-top: 1rem;
+}
+
+.testimonialVideo {
+    flex: 1;
+    position: relative;
+    max-width: 100%;
+}
+
+.testimonialVideo img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.playButton {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: 2px solid white;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.playButton:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* -------------------- Logos Section --------------------- */
+
+.logosSection {
+    text-align: center;
+    padding: 2rem 2rem 0 2rem;
+    background-color: #fff;
+}
+
+.logosSection h2 {
+    font-size: 1.75rem;
+    color: #003087;
+    margin-bottom: 2rem;
+}
+
+.logoScrollContainer {
+    overflow: hidden;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    height: 80px;
+    position: relative;
+}
+
+.logoScrollTrack {
+    display: flex;
+    gap: 2rem;
+    width: max-content;
+    animation: scrollLoop 30s linear infinite;
+}
+
+.logoScrollContainer:hover .logoScrollTrack {
+    animation-play-state: paused;
+}
+
+.logoImage {
+    height: 70px;
+    width: auto;
+    flex: 0 0 auto;
+    opacity: 0.7;
+    filter: grayscale(100%);
+    transition: all 0.3s ease;
+}
+
+.logoImage:hover {
+    opacity: 1;
+    filter: grayscale(0%);
+}
+
+@keyframes scrollLoop {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.caseStudies {
+    background-color: #00aa4f;
+    color: white;
+    font-weight: 600;
+    padding: 0.6rem 1.5rem;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+}
+
+.caseStudies:hover {
+    background-color: #008c40;
+}
+
+/* ------------------------- Stats Section -------------------------- */
+.stats {
+    text-align: center;
+    padding: 0 2rem;
+}
+
+.stats h2 {
+    font-size: 1.75rem;
+    color: #003087;
+    margin-bottom: 2rem;
+}
+
+.statsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.statItem h3 {
+    font-size: 3.5rem;
+    font-weight: 500;
+    color: #00458b;
+}
+
+.statItem p {
+    margin-top: 0.5rem;
+    color: #444;
+    font-size: 0.95rem;
+}
+
+.statNumberWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3rem;
+}
+
+.iconInline {
+    width: 40px;
+    height: 40px;
+}
+
+.labelLines {
+    margin-top: 0.5rem;
+}
+
+.labelTop {
+    font-weight: bold;
+    color: #003087;
+    display: block;
+}
+
+.labelBottom {
+    color: #003087;
+    display: block;
+    font-size: 0.9rem;
+}
+
+.statUnderline {
+    width: 60%;
+    height: 2px;
+    background-color: #00aa4f;
+    margin: 0.5rem auto 0;
+}
